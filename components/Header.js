@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Icon from './Icon'
 import styles from 'styles/Header.module.css'
 import useHeaderMenu from 'hooks/useHeaderMenu'
 import { CloseIcon, MenuIcon } from './Icons'
