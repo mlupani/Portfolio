@@ -1,0 +1,8 @@
+selector de idioma
+links redes sociales
+animaciones en iconos, fades en imagenes
+
+Proyecto:
+Nombre y descripcion del Proyecto
+skilss tecnicos utilizados
+readme de la documentacion de github
