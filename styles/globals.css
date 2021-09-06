@@ -957,10 +957,6 @@ a:hover {
   font-size: 2.5rem;
 }
 
-.work-content .w-like a {
-  color: #0078ff;
-}
-
 .work-content .w-like .num-like {
   font-size: .7rem;
 }
@@ -1459,5 +1455,9 @@ footer .credits a {
 }
 .carousel-inner .active {
   opacity: 1;
+}
+
+.swiper-slide{
+  width: 100% !important;
 }
 

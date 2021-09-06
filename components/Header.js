@@ -1,14 +1,17 @@
 import Link from 'next/link'
-import styles from 'styles/Header.module.css'
 import useHeaderMenu from 'hooks/useHeaderMenu'
+import { useRouter } from 'next/router'
 import { CloseIcon, MenuIcon } from './Icons'
+import styles from 'styles/Header.module.css'
+import { useEffect } from 'react'
 
 const Header = ({menuActive, references}) => {
 
+	const router = useRouter()
 	const { headerScroll, isMobile, showMobileMenu, handleScroll, handleMobileMenu } = useHeaderMenu()
 
 	return (
-		<header id="header" className={`fixed-top ${headerScroll ? 'header-scrolled':''}`}>
+		<header id="header" className={`fixed-top ${headerScroll || router?.pathname === '/details' ? 'header-scrolled':''}`}>
 			<div className="container d-flex align-items-center justify-content-between">
 
 				<h1 className="logo"><Link href="/"><a>Portfolio</a></Link></h1>

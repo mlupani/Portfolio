@@ -3,7 +3,7 @@ import ReactTooltip from 'react-tooltip'
 import { DetailsIcon, GitHubIcon, WebIcon } from './Icons'
 import useDevice from 'hooks/useDevice'
 
-const ProjectCard = ({title, subtitle, content, imgs}) => {
+const ProjectCard = ({title, subtitle, content, imgs, index}) => {
 
 	const [itemActive, setItemActive] = useState(0)
 	const [isMounted, setIsMounted] = useState(false)
@@ -57,7 +57,7 @@ const ProjectCard = ({title, subtitle, content, imgs}) => {
 												}
 												{
 													content.implementations.length > 3 ?
-														<li key={'mas'}>Ver m&aacute;s <DetailsIcon width="18" height="18" /></li> : ''
+														<li key={'mas'}>Ver m&aacute;s <DetailsIcon width="18" height="18" link={'/details'} id={index} /></li> : ''
 												}
 											</ul>
 
@@ -68,7 +68,7 @@ const ProjectCard = ({title, subtitle, content, imgs}) => {
 												}
 												{
 													content.functions.length > 3 ?
-														<li keu={'mas'}>Ver m&aacute;s <DetailsIcon width="18" height="18" /></li> : ''
+														<li keu={'mas'}>Ver m&aacute;s <DetailsIcon width="18" height="18" link={'/details'} id={index} /></li> : ''
 												}
 											</ul>
 
@@ -96,11 +96,11 @@ const ProjectCard = ({title, subtitle, content, imgs}) => {
 							</div>
 							{
 								isMounted &&
-									<div className="col-sm-2" style={{paddingRight: '5px',paddingLeft: '0px'}}>
+									<div className="col-sm-6" style={{paddingRight: '5px',paddingLeft: '0px'}}>
 										<div className="w-like" style={{display: 'flex', justifyContent: 'flex-end', columnGap: '10px'}}>
 											<WebIcon link={'https://minstagram.vercel.app'} />
 											<GitHubIcon link={'https://github.com/mlupani/Minstagram'} />
-											<DetailsIcon/>
+											<DetailsIcon link={'/details'} id={index} />
 										</div>
 									</div>
 							}

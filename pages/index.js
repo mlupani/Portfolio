@@ -18,7 +18,7 @@ export default function Home() {
 				<meta charSet="utf-8" />
 				<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 			</Head>
-			<Header menuActive={menuActive} references={references}  />
+			<Header menuActive={menuActive} references={references} headScroll />
 			<Hero innerRef={references[0]} />
 			<About innerRef={references[1]} />
 			<Projects innerRef={references[2]} />

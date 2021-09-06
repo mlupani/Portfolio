@@ -1,8 +1,7 @@
 selector de idioma
 links redes sociales
 animaciones en iconos, fades en imagenes
+formulario contacto
 
 Proyecto:
-Nombre y descripcion del Proyecto
-skilss tecnicos utilizados
 readme de la documentacion de github

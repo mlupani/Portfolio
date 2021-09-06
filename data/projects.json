@@ -1,56 +1,61 @@
-[{
-    "title" : "Minstagram PWA",
-    "subtitle" : "PWA que es un Clon de Instagram, con gran parte de sus funcionalidades",
-    "content":
-        {
-            "title" : "Clon de instagram realizado en NextJS",
-            "body" : "Pequeña implementacion de un clon de Instagram, el cual tiene muchas funcionalidades del original. El estilo esta hecho con Flexbox y Bootstrap",
-            "implementations": [
-                "Logins con Firebase",
-                "Recuperacion de contraseña",
-                "Acciones en tiempo real con Firebase (Chat, creacion de posts, etc)",
-                "Cropp de imagenes",
-                "Compresion de imagenes",
-                "Diseño Responsive"
-            ],
-            "functions": [
-                "Creacion con posts con la imagen elegida",
-                "Filtros de Instagram",
-                "TimeAgo en tiempo real",
-                "Likes, Comentarios y compartir posts",
-                "Seguir usuarios",
-                "Enviar mensajes privados",
-                "Eliminar posts propios",
-                "Buscar Usuarios",
-                "Vincular con Facebook",
-                "Ver actividad reciente",
-                "Seleccionar lugar en donde estes antes de crear post"
-            ],
-            "technologies": [
-                {
-                    "name" : "Javascript",
-                    "icon" : "javascript-plain"
-                },
-                {
-                    "name" : "React",
-                    "icon" : "react-original"
-                },
-                {
-                    "name" : "NextJS",
-                    "icon" : "nextjs-original"
-                },
-                {
-                    "name" : "Firebase",
-                    "icon" : "firebase-plain"
-                },
-                {
-                    "name" : "Bootstrap",
-                    "icon" : "bootstrap-plain"
-                }
-            ]
-        }
-    ,
-    "screens": [
-        "Minstagram-1.png" ,"Minstagram-2.png","Minstagram-3.png"
-    ]
-}]
+[
+    {
+        "title" : "Minstagram PWA",
+        "subtitle" : "PWA que es un Clon de Instagram, con gran parte de sus funcionalidades",
+        "URL": "https://minstagram.vercel.app",
+        "URL_github": "https://github.com/mlupani/Minstagram",
+        "category": "Social",
+        "content":
+            {
+                "title" : "Clon de instagram realizado en NextJS",
+                "body" : "Pequeña implementacion de un clon de Instagram, el cual tiene muchas funcionalidades del original. El estilo esta hecho con Flexbox y Bootstrap",
+                "implementations": [
+                    "Logins con Firebase",
+                    "Recuperacion de contraseña",
+                    "Acciones en tiempo real con Firebase (Chat, creacion de posts, etc)",
+                    "Cropp de imagenes",
+                    "Compresion de imagenes",
+                    "Diseño Responsive"
+                ],
+                "functions": [
+                    "Creacion con posts con la imagen elegida",
+                    "Filtros de Instagram",
+                    "TimeAgo en tiempo real",
+                    "Likes, Comentarios y compartir posts",
+                    "Seguir usuarios",
+                    "Enviar mensajes privados",
+                    "Eliminar posts propios",
+                    "Buscar Usuarios",
+                    "Vincular con Facebook",
+                    "Ver actividad reciente",
+                    "Seleccionar lugar en donde estes antes de crear post"
+                ],
+                "technologies": [
+                    {
+                        "name" : "Javascript",
+                        "icon" : "javascript-plain"
+                    },
+                    {
+                        "name" : "React",
+                        "icon" : "react-original"
+                    },
+                    {
+                        "name" : "NextJS",
+                        "icon" : "nextjs-original"
+                    },
+                    {
+                        "name" : "Firebase",
+                        "icon" : "firebase-plain"
+                    },
+                    {
+                        "name" : "Bootstrap",
+                        "icon" : "bootstrap-plain"
+                    }
+                ]
+            }
+        ,
+        "screens": [
+            "Minstagram-1.png" ,"Minstagram-2.png","Minstagram-3.png"
+        ]
+    }
+]
