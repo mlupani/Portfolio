@@ -46,7 +46,7 @@ const ProjectCard = ({title, subtitle, content, imgs}) => {
 							</div>
 						</div>
 						{
-							!isMobile ?
+							!isMobile && isMounted ?
 								<div className="work-img col-sm-4" style={{justifyContent: 'center', display:'flex', flexDirection: 'column', paddingTop: '5px'}}>
 									{
 										<>
@@ -57,7 +57,7 @@ const ProjectCard = ({title, subtitle, content, imgs}) => {
 												}
 												{
 													content.implementations.length > 3 ?
-														<li>Ver m&aacute;s <DetailsIcon width="18" height="18" /></li> : ''
+														<li key={'mas'}>Ver m&aacute;s <DetailsIcon width="18" height="18" /></li> : ''
 												}
 											</ul>
 
@@ -68,15 +68,15 @@ const ProjectCard = ({title, subtitle, content, imgs}) => {
 												}
 												{
 													content.functions.length > 3 ?
-														<li>Ver m&aacute;s <DetailsIcon width="18" height="18" /></li> : ''
+														<li keu={'mas'}>Ver m&aacute;s <DetailsIcon width="18" height="18" /></li> : ''
 												}
 											</ul>
 
 											<h6>Tecnologias</h6>
 											<ul style={{fontSize:'12px',display:'flex', flexDirection:'row',paddingLeft:'0px'}}>
 												{
-													content.technologies.map(({name,icon},i) => <><i style={{fontSize:'30px',margin:'5px'}} data-tip={name} className={`devicon-${icon} colored`}></i>
-														<ReactTooltip /></>)
+													content.technologies.map(({name,icon},i) => <span key={icon}><i  style={{fontSize:'30px',margin:'5px'}} data-tip={name} className={`devicon-${icon} colored`}></i>
+														<ReactTooltip /></span>)
 												}
 											</ul>
 										</>

@@ -21,7 +21,7 @@ const Projects = ({innerRef}) => {
 				</div>
 				<div className="row">
 					{
-						projects.map(({title, subtitle, content, screens}) => <ProjectCard key={title} title={title} subtitle={subtitle} content={content} imgs={screens} />)
+						projects.map(({title, subtitle, content, screens},i) => <ProjectCard key={i} title={title} subtitle={subtitle} content={content} imgs={screens} />)
 					}
 				</div>
 			</div>

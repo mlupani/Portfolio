@@ -57,7 +57,7 @@ const About = ({innerRef}) => {
 											Me considero autodidacta y dia a dia dedico tiempo a aprender para ser un mejor profesional en el &aacute;rea.
 										</p>
 										<p className="lead">
-											Mis hobbies son los videojuegos, mirar videos de tecnolog&iacute;a y anim&eacute;, y por supuesto la programaci&oacute;n lo es tambi&eacute;n ya que en mis tiempos libres me gusta programar, ya sea con proyectos personales o aprendiendo cosas nuevas.
+											Entre mis pasatiempos tambien predomina la programaci&oacute;n ya que disfruto realizando proyectos personales o aprendiendo cosas nuevas.
 										</p>
 									</div>
 								</div>

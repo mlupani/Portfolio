@@ -486,6 +486,11 @@ a:hover {
   align-items: center;
 }
 
+.row{
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
 .navbar li {
   position: relative;
 }
