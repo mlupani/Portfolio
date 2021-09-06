@@ -3,7 +3,6 @@ import useHeaderMenu from 'hooks/useHeaderMenu'
 import { useRouter } from 'next/router'
 import { CloseIcon, MenuIcon } from './Icons'
 import styles from 'styles/Header.module.css'
-import { useEffect } from 'react'
 
 const Header = ({menuActive, references}) => {
 
@@ -23,6 +22,7 @@ const Header = ({menuActive, references}) => {
 						<li><a onClick={(e) => handleScroll(e, references[0].current)} href="#" className={`nav-link scrollto ${menuActive === references[0].current.id ? 'active':''} `} >Inicio</a></li>
 						<li><a onClick={(e) => handleScroll(e, references[1].current)} href="#" className={`nav-link scrollto ${menuActive === references[1].current.id ? 'active':''}`} >Sobre m&iacute;</a></li>
 						<li><a onClick={(e) => handleScroll(e, references[2].current)} href="#" className={`nav-link scrollto ${menuActive === references[2].current.id ? 'active':''}`} >Proyectos</a></li>
+						<li><a onClick={(e) => handleScroll(e, references[3].current)} href="#" className={`nav-link scrollto ${menuActive === references[3].current.id ? 'active':''}`} >Contacto</a></li>
 					</ul>
 					{
 						!showMobileMenu ?

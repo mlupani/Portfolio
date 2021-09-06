@@ -4,6 +4,7 @@ import Header from 'components/Header'
 import Hero from 'components/hero'
 import Projects from 'components/Projects'
 import useMenuActive from 'hooks/useMenuActive'
+import Contact from 'components/Contact'
 
 export default function Home() {
 
@@ -22,6 +23,7 @@ export default function Home() {
 			<Hero innerRef={references[0]} />
 			<About innerRef={references[1]} />
 			<Projects innerRef={references[2]} />
+			<Contact innerRef={references[3]} />
 		</>
 	)
 }
