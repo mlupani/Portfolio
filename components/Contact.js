@@ -27,7 +27,7 @@ const Contact = ({innerRef}) => {
 											</h5>
 										</div>
 										<div>
-											<form onSubmit={(e) => onSubmit(e, 'api/hello')} action="#" method="post" role="form" className="php-email-form">
+											<form onSubmit={(e) => onSubmit(e, 'api/send-mail')} action="#" method="post" role="form" className="php-email-form">
 												<div className="row">
 													<div className="col-md-12 mb-3">
 														<div className="form-group">

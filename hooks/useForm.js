@@ -3,7 +3,7 @@ import { useState } from 'react'
 export const useForm = ( initState ) => {
 
 	const [state, setState] = useState( initState )
-    const [sendState, setSendState] = useState(null)
+	const [sendState, setSendState] = useState(null)
 
 	const onChange = ( value, field ) => {
 		setState({
@@ -19,7 +19,7 @@ export const useForm = ( initState ) => {
 	const onSubmit = async (e, route) => {
 		e.preventDefault()
 
-        setSendState(1)
+		setSendState(1)
 		const res = await fetch(route, {
 			method: 'POST',
 			body: JSON.stringify(state),
@@ -28,7 +28,7 @@ export const useForm = ( initState ) => {
 			}
 		})
 
-		const data = await res.json()
+		await res.json()
 		setSendState(2)
 	}
 
@@ -38,7 +38,7 @@ export const useForm = ( initState ) => {
 		setForm,
 		onChange,
 		onSubmit,
-        sendState
+		sendState
 	}
 
 }
