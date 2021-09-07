@@ -21,13 +21,13 @@ const useNearScreen = ({distance='100px', once=true, refs}) => {
 		}
 
 		if(elementRefs?.current){
-			observer = new IntersectionObserver(handleChange,{rootMargin: distance, threshold: 0.5})
+			observer = new IntersectionObserver(handleChange,{rootMargin: distance, threshold: 0.6})
 			observer.observe(elementRefs.current)
 		}
 		else{
 			if(elementRefs && elementRefs[0].current){
 				elementRefs.forEach(element => {
-					observer = new IntersectionObserver(handleChange,{rootMargin: distance, threshold: 0.5})
+					observer = new IntersectionObserver(handleChange,{rootMargin: distance, threshold: 0.6})
 					if(element) observer.observe(element.current)
 				})
 			}

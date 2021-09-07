@@ -4,14 +4,12 @@ import { useRouter } from 'next/router'
 import projects from 'data/projects.json'
 import Link from 'next/link'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import SwiperCore, { Navigation,Pagination, Autoplay } from 'swiper'
+import { Navigation,Pagination, Autoplay } from 'swiper'
 import 'swiper/css/bundle'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import useMenuActive from 'hooks/useMenuActive'
 import Header from 'components/Header'
-
-SwiperCore.use([Navigation,Pagination])
 
 const Details = () => {
 
@@ -38,18 +36,21 @@ const Details = () => {
 					<div className="col-lg-8">
 						<div className="portfolio-details-slider swiper-container">
 							<div className="swiper-wrapper align-items-center">
-								<Swiper
-									autoplay={{
-										'delay': 4000,
-										'disableOnInteraction': false,
-									}}
-									pagination={{'clickable': true}}
-									modules={[Navigation,Pagination,Autoplay]}
-									navigation={true} className="mySwiper">
-									{
-										project?.screens?.map(img => <SwiperSlide key={img}><img src={`img/${img}`} alt="" /></SwiperSlide>)
-									}
-								</Swiper>
+								{
+									project ? 
+										<Swiper
+											autoplay={{
+												'delay': 4000,
+												'disableOnInteraction': false,
+											}}
+											pagination={{'clickable': true}}
+											modules={[Navigation,Pagination,Autoplay]}
+											navigation={true} className="mySwiper">
+											{
+												project?.screens?.map(img => <SwiperSlide key={img}><img src={`img/${img}`} alt="" /></SwiperSlide>)
+											}
+										</Swiper> : ''
+								}
 							</div>
 						</div>
 					</div>

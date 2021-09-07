@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import calcularEdad from 'helpers/calcularEdad'
 import SkillsIcons from './SkillsIcons'
 
 const About = ({innerRef}) => {
@@ -26,10 +27,9 @@ const About = ({innerRef}) => {
 										<div className="col-sm-6 col-md-7">
 											<div className="about-info">
 												<p><span className="title-s">Nombre: </span> <span>Miguel Angel Lupani</span></p>
-												<p><span className="title-s">Edad: </span> <span>28 A&ntilde;os</span></p>
+												<p><span className="title-s">Fecha de nacimiento: </span> <span>02/08/1992  ({calcularEdad('1992/08/02')} A&ntilde;os)</span></p>
 												<p><span className="title-s">Perfil: </span> <span>Desarrollador Full stack</span></p>
-												<p><span className="title-s">Email: </span> <span>mlupani2@gmail.com</span></p>
-												<p><span className="title-s">Tel&eacute;fono: </span> <span>11-6371-7386</span></p>
+												<p><span className="title-s">Estado civil: </span> <span>Casado</span></p>
 											</div>
 										</div>
 									</div>
@@ -57,7 +57,7 @@ const About = ({innerRef}) => {
 											Me considero autodidacta y dia a dia dedico tiempo a aprender para ser un mejor profesional en el &aacute;rea.
 										</p>
 										<p className="lead">
-											Entre mis pasatiempos tambien predomina la programaci&oacute;n ya que disfruto realizando proyectos personales o aprendiendo cosas nuevas.
+											Tambi&eacute;n entre mis pasatiempos  predomina la programaci&oacute;n ya que disfruto realizando proyectos personales y aprendiendo cosas nuevas.
 										</p>
 									</div>
 								</div>

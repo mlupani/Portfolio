@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import ReactTooltip from 'react-tooltip'
 import { DetailsIcon, GitHubIcon, WebIcon } from './Icons'
 import useDevice from 'hooks/useDevice'
 
@@ -76,7 +75,7 @@ const ProjectCard = ({title, subtitle, content, imgs, index}) => {
 											<ul style={{fontSize:'12px',display:'flex', flexDirection:'row',paddingLeft:'0px'}}>
 												{
 													content.technologies.map(({name,icon},i) => <span key={icon}><i  style={{fontSize:'30px',margin:'5px'}} data-tip={name} className={`devicon-${icon} colored`}></i>
-														<ReactTooltip /></span>)
+													</span>)
 												}
 											</ul>
 										</>

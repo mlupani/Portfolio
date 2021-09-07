@@ -13,9 +13,9 @@ const Contact = ({innerRef}) => {
 
 	return (
 		<section id="contact" ref={innerRef} className="paralax-mf footer-paralax bg-image sect-mt4 route" style={{'backgroundImage' : 'url(img/overlay-bg.jpg)'}}>
-			<div className="overlay-mf"></div>
-			<div className="container">
-				<div className="row">
+			<div className="overlay-mf" ></div>
+			<div className="container" >
+				<div className="row" >
 					<div className="col-sm-12">
 						<div className="contact-mf">
 							<div id="contact" className="box-shadow-full">
@@ -27,7 +27,7 @@ const Contact = ({innerRef}) => {
 											</h5>
 										</div>
 										<div>
-											<form onSubmit={(e) => onSubmit(e, 'api/send-mail')} action="#" method="post" role="form" className="php-email-form">
+											<form  onSubmit={(e) => onSubmit(e, 'api/send-mail')} action="#" method="post" role="form" className="php-email-form">
 												<div className="row">
 													<div className="col-md-12 mb-3">
 														<div className="form-group">
@@ -70,7 +70,7 @@ const Contact = ({innerRef}) => {
 											</form>
 										</div>
 									</div>
-									<div className="col-md-6">
+									<div  className="col-md-6">
 										<div className="title-box-2 pt-4 pt-md-0">
 											<h5 className="title-left">
                         Ponte en contacto
@@ -82,10 +82,10 @@ const Contact = ({innerRef}) => {
 						Muchas Gracias.
 											</p>
 										</div>
-										<div className="socials">
+										<div className="socials" >
 											<ul>
 												<li><Link href="https://www.linkedin.com/in/miguel-angel-lupani-5847b720a/"><a target="_blank" ><span className="ico-circle"><LinkedinIcon/></span></a></Link></li>
-												<li><Link href="https://api.whatsapp.com/send?phone=5491163717386"><a target="_blank"><span className="ico-circle"><WhatsappIcon/></span></a></Link></li>
+												<li><Link href="https://api.whatsapp.com/send?phone=5491163717386&text=Hola Miguel Angel Como estas? Quiero hacerte una consulta: "><a target="_blank"><span className="ico-circle"><WhatsappIcon/></span></a></Link></li>
 											</ul>
 										</div>
 									</div>
