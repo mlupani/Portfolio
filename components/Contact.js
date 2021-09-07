@@ -1,4 +1,6 @@
 import { useForm } from 'hooks/useForm'
+import { LinkedinIcon, WhatsappIcon } from './Icons'
+import Link from 'next/link'
 
 const Contact = ({innerRef}) => {
 
@@ -10,7 +12,7 @@ const Contact = ({innerRef}) => {
 	})
 
 	return (
-		<section id="contact" ref={innerRef} className="paralax-mf footer-paralax bg-image sect-mt4 route" style={{'background-image' : 'url(img/overlay-bg.jpg)'}}>
+		<section id="contact" ref={innerRef} className="paralax-mf footer-paralax bg-image sect-mt4 route" style={{'backgroundImage' : 'url(img/overlay-bg.jpg)'}}>
 			<div className="overlay-mf"></div>
 			<div className="container">
 				<div className="row">
@@ -29,22 +31,22 @@ const Contact = ({innerRef}) => {
 												<div className="row">
 													<div className="col-md-12 mb-3">
 														<div className="form-group">
-															<input type="text" name="name" onChange={(e) => onChange(e.target.value, e.target.name)} className="form-control" id="name" placeholder="Your Name" required />
+															<input type="text" name="name" onChange={(e) => onChange(e.target.value, e.target.name)} className="form-control" id="name" placeholder="Nombre" required />
 														</div>
 													</div>
 													<div className="col-md-12 mb-3">
 														<div className="form-group">
-															<input type="email" className="form-control" name="email" onChange={(e) => onChange(e.target.value, e.target.name)} id="email" placeholder="Your Email" required/>
+															<input type="email" className="form-control" name="email" onChange={(e) => onChange(e.target.value, e.target.name)} id="email" placeholder="Email" required/>
 														</div>
 													</div>
 													<div className="col-md-12 mb-3">
 														<div className="form-group">
-															<input type="text" className="form-control" name="subject" onChange={(e) => onChange(e.target.value, e.target.name)} id="subject" placeholder="Subject" required/>
+															<input type="text" className="form-control" name="subject" onChange={(e) => onChange(e.target.value, e.target.name)} id="subject" placeholder="Asunto" required/>
 														</div>
 													</div>
 													<div className="col-md-12">
 														<div className="form-group">
-															<textarea className="form-control" name="message" onChange={(e) => onChange(e.target.value, e.target.name)} rows="5" placeholder="Message" required></textarea>
+															<textarea className="form-control" name="message" onChange={(e) => onChange(e.target.value, e.target.name)} rows="5" placeholder="Mensaje" required></textarea>
 														</div>
 													</div>
 													<div className="col-md-12 text-center my-3">
@@ -71,28 +73,19 @@ const Contact = ({innerRef}) => {
 									<div className="col-md-6">
 										<div className="title-box-2 pt-4 pt-md-0">
 											<h5 className="title-left">
-                        Get in Touch
+                        Ponte en contacto
 											</h5>
 										</div>
 										<div className="more-info">
 											<p className="lead">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolorum dolorem soluta quidem
-                        expedita aperiam aliquid at.
-                        Totam magni ipsum suscipit amet? Autem nemo esse laboriosam ratione nobis
-                        mollitia inventore?
+                        Tambien puedes enviarme tu consulta a trav&eacute;s de Whatsapp y/o Linkedin. <br></br>
+						Muchas Gracias.
 											</p>
-											<ul className="list-ico">
-												<li><span className="bi bi-geo-alt"></span> 329 WASHINGTON ST BOSTON, MA 02108</li>
-												<li><span className="bi bi-phone"></span> (617) 557-0089</li>
-												<li><span className="bi bi-envelope"></span> contact@example.com</li>
-											</ul>
 										</div>
 										<div className="socials">
 											<ul>
-												<li><a href=""><span className="ico-circle"><i className="bi bi-facebook"></i></span></a></li>
-												<li><a href=""><span className="ico-circle"><i className="bi bi-instagram"></i></span></a></li>
-												<li><a href=""><span className="ico-circle"><i className="bi bi-twitter"></i></span></a></li>
-												<li><a href=""><span className="ico-circle"><i className="bi bi-linkedin"></i></span></a></li>
+												<li><Link href="https://www.linkedin.com/in/miguel-angel-lupani-5847b720a/"><a target="_blank" ><span className="ico-circle"><LinkedinIcon/></span></a></Link></li>
+												<li><Link href="https://api.whatsapp.com/send?phone=5491163717386"><a target="_blank"><span className="ico-circle"><WhatsappIcon/></span></a></Link></li>
 											</ul>
 										</div>
 									</div>

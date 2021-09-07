@@ -31,8 +31,9 @@ const Details = () => {
 			<div ref={references[0]}></div>
 			<div ref={references[1]}></div>
 			<div ref={references[2]}></div>
+			<div ref={references[3]}></div>
 			<section id="portfolio-details" className="portfolio-details">
-				<div className="row gy-4" style={{alignItems: 'center'}}>
+				<div className="row gy-4">
 
 					<div className="col-lg-8">
 						<div className="portfolio-details-slider swiper-container">
