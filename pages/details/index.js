@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import projects from 'data/projects.json'
 import Link from 'next/link'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation,Pagination, Autoplay } from 'swiper'
+import SwiperCore, { Navigation,Pagination, Autoplay } from 'swiper'
 import 'swiper/css/bundle'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
@@ -15,21 +15,21 @@ const Details = () => {
 
 	const router = useRouter()
 	const [project, setProject] = useState(null)
-	const { menuActive, references } = useMenuActive()
+	const { menuActive, references } = useMenuActive(false)
+
+	useEffect(() => {
+		SwiperCore.use([Navigation,Pagination,Autoplay])
+	}, [])
 
 	useEffect(() => {
 		let id = router.query.id
 		setProject(projects[id])
-	}, [router.query.id])
+	}, [])
 
 	return (
 		<>
 			<Header menuActive={menuActive} references={references}  />
 			<br></br><br></br>
-			<div ref={references[0]}></div>
-			<div ref={references[1]}></div>
-			<div ref={references[2]}></div>
-			<div ref={references[3]}></div>
 			<section id="portfolio-details" className="portfolio-details">
 				<div className="row gy-4">
 
@@ -37,14 +37,13 @@ const Details = () => {
 						<div className="portfolio-details-slider swiper-container">
 							<div className="swiper-wrapper align-items-center">
 								{
-									project ? 
+									project ?
 										<Swiper
 											autoplay={{
 												'delay': 4000,
 												'disableOnInteraction': false,
 											}}
 											pagination={{'clickable': true}}
-											modules={[Navigation,Pagination,Autoplay]}
 											navigation={true} className="mySwiper">
 											{
 												project?.screens?.map(img => <SwiperSlide key={img}><img src={`img/${img}`} alt="" /></SwiperSlide>)

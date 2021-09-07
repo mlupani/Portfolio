@@ -14,9 +14,9 @@ const useHeaderMenu = () => {
 	}, [isMobile])
 
 	const handleScroll = (e, to) => {
-		e.preventDefault()
+		if(e)	e.preventDefault()
 		setShowMobileMenu(false)
-		to.scrollIntoView({block: 'start', behavior: 'smooth'})
+		to?.scrollIntoView({block: 'start', behavior: 'smooth'})
 	}
 
 	const handleMobileMenu = () => {

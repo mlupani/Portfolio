@@ -85,7 +85,7 @@ const Contact = ({innerRef}) => {
 										<div className="socials" >
 											<ul>
 												<li><Link href="https://www.linkedin.com/in/miguel-angel-lupani-5847b720a/"><a target="_blank" ><span className="ico-circle"><LinkedinIcon/></span></a></Link></li>
-												<li><Link href="https://api.whatsapp.com/send?phone=5491163717386&text=Hola Miguel Angel Como estas? Quiero hacerte una consulta: "><a target="_blank"><span className="ico-circle"><WhatsappIcon/></span></a></Link></li>
+												<li><Link href="https://api.whatsapp.com/send?phone=5491163717386&text=Hola Miguel Angel Como estas? Quiero hacerte una consulta:&nbsp;"><a target="_blank"><span className="ico-circle"><WhatsappIcon/></span></a></Link></li>
 											</ul>
 										</div>
 									</div>

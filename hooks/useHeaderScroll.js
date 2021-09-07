@@ -5,14 +5,15 @@ const useHeaderScroll = () => {
 	const [headerScroll,setHeaderScroll] = useState(false)
 
 	useEffect(() => {
-		let scroll = window.addEventListener('scroll',() => {
+		const handleScroll = () => {
 			if(window.scrollY > 100)
 				setHeaderScroll(true)
 			else
 				setHeaderScroll(false)
-		})
+		}
+		window.addEventListener('scroll', handleScroll)
 		return () => {
-			window.removeEventListener('scroll',scroll)
+			window.removeEventListener('scroll', handleScroll)
 		}
 	}, [])
 
