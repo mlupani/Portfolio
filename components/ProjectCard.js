@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { DetailsIcon, GitHubIcon, WebIcon } from './Icons'
 import useDevice from 'hooks/useDevice'
 
-const ProjectCard = ({title, subtitle, content, imgs, index}) => {
+const ProjectCard = ({title, subtitle, content, imgs, index, URL, URL_github}) => {
 
 	const [itemActive, setItemActive] = useState(0)
 	const [isMounted, setIsMounted] = useState(false)
@@ -11,7 +11,7 @@ const ProjectCard = ({title, subtitle, content, imgs, index}) => {
 
 	useEffect(() => {
 		let int = setInterval(() => {
-			setItemActive(prev => prev < 2 ? prev + 1 : 0)
+			setItemActive(prev => prev < imgs.length-1 ? prev + 1 : 0)
 		},4000)
 		setIntervalo(int)
 		return () => {
@@ -74,8 +74,7 @@ const ProjectCard = ({title, subtitle, content, imgs, index}) => {
 											<h6>Tecnologias</h6>
 											<ul style={{fontSize:'12px',display:'flex', flexDirection:'row',paddingLeft:'0px'}}>
 												{
-													content.technologies.map(({name,icon},i) => <span key={icon}><i  style={{fontSize:'30px',margin:'5px'}} data-tip={name} className={`devicon-${icon} colored`}></i>
-													</span>)
+													content.technologies.map(({name,icon},i) => <span key={icon}><i  style={{fontSize:'30px',margin:'5px'}} data-tip={name} className={`devicon-${icon} colored`}></i></span>)
 												}
 											</ul>
 										</>
@@ -97,8 +96,8 @@ const ProjectCard = ({title, subtitle, content, imgs, index}) => {
 								isMounted &&
 									<div className="col-sm-6" style={{paddingRight: '5px',paddingLeft: '0px'}}>
 										<div className="w-like" style={{display: 'flex', justifyContent: 'flex-end', columnGap: '10px'}}>
-											<WebIcon link={'https://minstagram.vercel.app'} />
-											<GitHubIcon link={'https://github.com/mlupani/Minstagram'} />
+											<WebIcon link={URL} />
+											<GitHubIcon link={URL_github} />
 											<DetailsIcon link={'/details'} id={index} />
 										</div>
 									</div>

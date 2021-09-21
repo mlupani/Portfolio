@@ -9,6 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.15",
     "bootstrap": "^5.1.0",
     "next": "11.1.2",
     "nodemailer": "^6.6.3",
@@ -21,6 +25,7 @@
     "swiper": "^7.0.3"
   },
   "devDependencies": {
+    "@iconify/react": "^3.0.1",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.2",
     "eslint-plugin-react": "^7.25.1"

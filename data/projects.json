@@ -57,5 +57,61 @@
         "screens": [
             "Minstagram-1.png" ,"Minstagram-2.png","Minstagram-3.png"
         ]
+    },
+    {
+        "title" : "E-Commerce Client",
+        "subtitle" : "Cliente de Ecommerce con manejo de productos, categorias y carrito de compras",
+        "URL": "https://ecommerce-client-nine.vercel.app",
+        "URL_github": "https://github.com/mlupani/ecommerce/tree/main/client",
+        "category": "Comercial",
+        "content":
+            {
+                "title" : "Ecommerce realizado con React, React-Redux y NodeJS",
+                "body" : "Implementación de un Ecommerce donde pueden manejarse compras de productos, busquedas y manejar el carrito de compras. Realizado con React, Manejo de estados con React-Redux, backend en NodeJS y base de datos de MongoDB",
+                "implementations": [
+                    "Autenticaciones con Json Web Tokens",
+                    "Estados globales con React-Redux-Toolkit",
+                    "Busquedas con Algolia Search",
+                    "Pago con tarjeta de credito utilizando Stripe",
+                    "Diseño Responsive"
+                ],
+                "functions": [
+                    "Agregar y quitar productos del carrito",
+                    "Busquedas de productos con algolia",
+                    "Ver productos seleccionando una categoria",
+                    "Agregar productos a mi WishList o lista de deseos",
+                    "Funcionalidad de carrito sin estar autenticado",
+                    "Dejar comentarios en los productos",
+                    "Pagos con tarjeta guardando los datos en stripe",
+                    "Creacion de usuarios con su imagen de perfil",
+                    "Seccion de 'Mis compras' para visualizar las compras realizadas por el usuario "
+                ],
+                "technologies": [
+                    {
+                        "name" : "Javascript",
+                        "icon" : "javascript-plain"
+                    },
+                    {
+                        "name" : "React",
+                        "icon" : "react-original"
+                    },
+                    {
+                        "name" : "Redux",
+                        "icon" : "redux-original"
+                    },
+                    {
+                        "name" : "NodeJS",
+                        "icon" : "nodejs-plain"
+                    },
+                    {
+                        "name" : "Bootstrap",
+                        "icon" : "bootstrap-plain"
+                    }
+                ]
+            }
+        ,
+        "screens": [
+            "ecommerce-1.png" ,"ecommerce-2.png","ecommerce-3.png","ecommerce-4.png","ecommerce-5.png"
+        ]
     }
 ]

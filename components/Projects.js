@@ -37,7 +37,7 @@ const Projects = ({innerRef}) => {
 								modules={[Navigation,Pagination]}
 								navigation={true} className="mySwiper">
 								{
-									projects.map(({title, subtitle, content, screens},i) =>  <SwiperSlide key={i}><ProjectCard title={title} subtitle={subtitle} content={content} imgs={screens} index={i} /></SwiperSlide>)
+									projects.map(({title, subtitle, content, screens, URL, URL_github},i) =>  <SwiperSlide key={i}><ProjectCard title={title} subtitle={subtitle} content={content} imgs={screens} index={i} URL={URL} URL_github={URL_github} /></SwiperSlide>)
 								}
 							</Swiper> :
 							projects.map(({title, subtitle, content, screens},i) =>  <ProjectCard key={i} title={title} subtitle={subtitle} content={content} imgs={screens} index={i} />)
