@@ -31,10 +31,9 @@ const Projects = ({innerRef}) => {
 				</div>
 				<div ref={innerRef} className="row">
 					{
-						!isMobile ?
+						!isMobile && projects ?
 							<Swiper
-								pagination={{'clickable': true}}
-								modules={[Navigation,Pagination]}
+								pagination={true}
 								navigation={true} className="mySwiper">
 								{
 									projects.map(({title, subtitle, content, screens, URL, URL_github},i) =>  <SwiperSlide key={i}><ProjectCard title={title} subtitle={subtitle} content={content} imgs={screens} index={i} URL={URL} URL_github={URL_github} /></SwiperSlide>)

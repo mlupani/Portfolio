@@ -1457,3 +1457,11 @@ footer .credits a {
   width: 100% !important;
 }
 
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+  border: 1px solid #0078ff;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active{
+  background-color: #0078ff;
+}
+

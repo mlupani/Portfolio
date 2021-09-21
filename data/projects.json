@@ -64,11 +64,14 @@
         "URL": "https://ecommerce-client-nine.vercel.app",
         "URL_github": "https://github.com/mlupani/ecommerce/tree/main/client",
         "category": "Comercial",
+        "URL_backend": "https://github.com/mlupani/ecommerce/tree/main/server",
         "content":
             {
                 "title" : "Ecommerce realizado con React, React-Redux y NodeJS",
                 "body" : "Implementación de un Ecommerce donde pueden manejarse compras de productos, busquedas y manejar el carrito de compras. Realizado con React, Manejo de estados con React-Redux, backend en NodeJS y base de datos de MongoDB",
                 "implementations": [
+                    "Backend en NodeJS y Express",
+                    "Base de datos en MongoDB utilizando Mongoose",
                     "Autenticaciones con Json Web Tokens",
                     "Estados globales con React-Redux-Toolkit",
                     "Busquedas con Algolia Search",

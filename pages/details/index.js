@@ -11,6 +11,8 @@ import 'swiper/css/pagination'
 import useMenuActive from 'hooks/useMenuActive'
 import Header from 'components/Header'
 
+SwiperCore.use([Navigation,Pagination,Autoplay])
+
 const Details = () => {
 
 	const router = useRouter()
@@ -18,13 +20,11 @@ const Details = () => {
 	const { menuActive, references } = useMenuActive(false)
 
 	useEffect(() => {
-		SwiperCore.use([Navigation,Pagination,Autoplay])
-	}, [])
-
-	useEffect(() => {
 		let id = router.query.id
 		setProject(projects[id])
-	}, [])
+	}, [router.query.id])
+
+	if(!project) return null
 
 	return (
 		<>
@@ -32,23 +32,21 @@ const Details = () => {
 			<br></br><br></br>
 			<section id="portfolio-details" className="portfolio-details">
 				<div className="row gy-4">
-
 					<div className="col-lg-8">
 						<div className="portfolio-details-slider swiper-container">
 							<div className="swiper-wrapper align-items-center">
 								{
-									project ?
-										<Swiper
-											autoplay={{
-												'delay': 4000,
-												'disableOnInteraction': false,
-											}}
-											pagination={{'clickable': true}}
-											navigation={true} className="mySwiper">
-											{
-												project?.screens?.map(img => <SwiperSlide key={img}><img src={`img/${img}`} alt="" /></SwiperSlide>)
-											}
-										</Swiper> : ''
+									<Swiper
+										autoplay={{
+											'delay': 4000,
+											'disableOnInteraction': false,
+										}}
+										pagination={{'clickable': true}}
+										navigation={true} className="mySwiper">
+										{
+											project?.screens?.map(img => <SwiperSlide key={img}><img src={`img/${img}`} alt="" /></SwiperSlide>)
+										}
+									</Swiper>
 								}
 							</div>
 						</div>
@@ -62,8 +60,12 @@ const Details = () => {
 								<div className="portfolio-description">
 									<ul>
 										<li><strong>Categor&iacute;a</strong>: {project?.category} </li>
-										<li><strong>URL del projecto</strong>: <Link href={project?.URL}><a target="_blank">{project?.URL}</a></Link></li>
-										<li><strong>URL del repositorio</strong>: <Link href={project?.URL_github}><a target="_blank">{project?.URL_github}</a></Link></li>
+										<li><Link href={project?.URL}><a target="_blank"><strong><u>Web</u></strong></a></Link></li>
+										<li><Link href={project?.URL_github}><a target="_blank"><strong><u>Repositorio</u></strong></a></Link></li>
+										{
+											project.URL_backend ?
+												<li><Link href={project?.URL_backend}><a target="_blank"><strong><u>Backend</u></strong></a></Link></li> : ''
+										}
 									</ul>
 									<p>
 										{
