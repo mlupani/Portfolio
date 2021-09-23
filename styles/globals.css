@@ -972,7 +972,10 @@ a:hover {
 }
 
 .portfolio-details .portfolio-details-slider img {
-  width: 100%;
+  width: 100% !important;
+  height: auto !important;
+  object-fit: cover !important;
+  object-position: center !important;
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination {
@@ -1464,4 +1467,3 @@ footer .credits a {
 .swiper-pagination .swiper-pagination-bullet-active{
   background-color: #0078ff;
 }
-

@@ -34,7 +34,7 @@ const Details = () => {
 				<div className="row gy-4">
 					<div className="col-lg-8">
 						<div className="portfolio-details-slider swiper-container">
-							<div className="swiper-wrapper align-items-center">
+							<div style={{textAlign: 'center'}} className="swiper-wrapper align-items-center">
 								{
 									<Swiper
 										autoplay={{
@@ -42,9 +42,9 @@ const Details = () => {
 											'disableOnInteraction': false,
 										}}
 										pagination={{'clickable': true}}
-										navigation={true} className="mySwiper">
+										navigation={false} className="mySwiper">
 										{
-											project?.screens?.map(img => <SwiperSlide key={img}><img src={`img/${img}`} alt="" /></SwiperSlide>)
+											project?.screens?.map(img => <SwiperSlide key={img}><img style={{objectFit: 'contain', width: '100%', maxHeight: '700px'}} src={`img/${img}`} alt="" /></SwiperSlide>)
 										}
 									</Swiper>
 								}
