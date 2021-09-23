@@ -10,6 +10,7 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import useMenuActive from 'hooks/useMenuActive'
 import Header from 'components/Header'
+import useDevice from 'hooks/useDevice'
 
 SwiperCore.use([Navigation,Pagination,Autoplay])
 
@@ -18,6 +19,7 @@ const Details = () => {
 	const router = useRouter()
 	const [project, setProject] = useState(null)
 	const { menuActive, references } = useMenuActive(false)
+	const isMobile = useDevice()
 
 	useEffect(() => {
 		let id = router.query.id
@@ -44,7 +46,7 @@ const Details = () => {
 										pagination={{'clickable': true}}
 										navigation={false} className="mySwiper">
 										{
-											project?.screens?.map(img => <SwiperSlide key={img}><img style={{objectFit: 'contain', width: '100%', maxHeight: '700px'}} src={`img/${img}`} alt="" /></SwiperSlide>)
+											project?.screens?.map(img => <SwiperSlide key={img}><img style={{objectFit: 'contain', width: '100%', height: `${isMobile ? '20rem' : '700px'}`}} src={`img/${img}`} alt="" /></SwiperSlide>)
 										}
 									</Swiper>
 								}
