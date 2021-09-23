@@ -30,7 +30,7 @@ const ProjectCard = ({title, subtitle, content, imgs, index, URL, URL_github}) =
 					<div className="row">
 						<div className="work-img col-sm-8">
 							<div id="carouselExampleIndicators" style={{border:'2px solid lightgray'}} className="carousel slide carousel-fade" data-ride="carousel">
-								<ol className="carousel-indicators">
+								<ol style={{backgroundColor: 'rgba(1,1,1,0.2)', borderRadius: '5px 5px'}} className="carousel-indicators">
 									{
 										imgs.map((img,i) => <li key={i} data-target="#carouselExampleIndicators" onClick={() => {setItemActive(i);clearInterval(intervalo)}} data-slide-to="0" className={`${itemActive === i ? 'active':''}`}></li>)
 									}
@@ -38,7 +38,7 @@ const ProjectCard = ({title, subtitle, content, imgs, index, URL, URL_github}) =
 								<div className="carousel-inner">
 									{
 										imgs.map((img,i) => <div key={img} className={`carousel-item ${itemActive === i ? 'active':''}`}>
-											<img className="d-block w-100 img-fluid" src={`img/${img}`} alt="" />
+											<img style={{objectFit: 'contain', width: '100%', maxHeight: '350px'}} className="d-block w-100 img-fluid" src={`img/${img}`} alt="" />
 										</div>)
 									}
 								</div>
