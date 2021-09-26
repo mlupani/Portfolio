@@ -117,5 +117,53 @@
         "screens": [
             "ecommerce-1.png" ,"ecommerce-2.png","ecommerce-3.png","ecommerce-4.png","ecommerce-5.png"
         ]
+    },
+    {
+        "title" : "E-Commerce Admin",
+        "subtitle" : "Administrador de Ecommerce para manejar productos y sus categorias",
+        "URL": "https://play.google.com/store/apps/details?id=com.mlupani.ecommerceadmin&hl=es-419&ah=H5liuWoUQ8MwH6XwDbFPiz3JfUI",
+        "URL_github": "https://github.com/mlupani/Ecomerce-admin-RN",
+        "category": "Comercial",
+        "URL_backend": "https://github.com/mlupani/ecommerce/tree/main/server",
+        "content":
+            {
+                "title" : "Ecommerce Admin realizado con React Native",
+                "body" : "Implementación de un administrador de Ecommerce donde pueden manejarse productos y categorias, con sus imagenes, precio, stock y descripcion, estos cambios se reflejan en el cliente. Backend en NodeJS y base de datos de MongoDB",
+                "implementations": [
+                    "App para Android OS",
+                    "Backend en NodeJS y Express",
+                    "Base de datos en MongoDB utilizando Mongoose",
+                    "Autenticaciones con Json Web Tokens",
+                    "Uso de la galeria y la camara",
+                    "Sesion persistente con async Storage",
+                    "todo cambio se vera reflejado en el cliente de E-commerce"
+                ],
+                "functions": [
+                    "Agregar nuevos productos",
+                    "Modificar productos (Nombre, descripcion, categoria, precio, stock e imagen del producto",
+                    "Agregar nuevas categorias",
+                    "Editar categorias (Nombre, descripcion, imagen)",
+                    "Autenticacion a la aplicacion",
+                    "Buscar productos"
+                ],
+                "technologies": [
+                    {
+                        "name" : "Typescript",
+                        "icon" : "typescript-plain"
+                    },
+                    {
+                        "name" : "React Native",
+                        "icon" : "react-original"
+                    },
+                    {
+                        "name" : "NodeJS",
+                        "icon" : "nodejs-plain"
+                    }
+                ]
+            }
+        ,
+        "screens": [
+            "ecommerce-admin-1.jpeg" ,"ecommerce-admin-2.jpeg","ecommerce-admin-3.jpeg","ecommerce-admin-4.jpeg"
+        ]
     }
 ]
