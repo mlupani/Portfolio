@@ -56,7 +56,7 @@ const ProjectCard = ({title, subtitle, content, imgs, index, URL, URL_github}) =
 												}
 												{
 													content.implementations.length > 3 ?
-														<li key={'mas'}>Ver m&aacute;s <DetailsIcon width="18" height="18" link={'/details'} id={index} /></li> : ''
+														<li key={'mas'}>Ver m&aacute;s <DetailsIcon width="18" height="18" link={`/details/${index}`} /></li> : ''
 												}
 											</ul>
 
@@ -67,7 +67,7 @@ const ProjectCard = ({title, subtitle, content, imgs, index, URL, URL_github}) =
 												}
 												{
 													content.functions.length > 3 ?
-														<li keu={'mas'}>Ver m&aacute;s <DetailsIcon width="18" height="18" link={'/details'} id={index} /></li> : ''
+														<li keu={'mas'}>Ver m&aacute;s <DetailsIcon width="18" height="18" link={`/details/${index}`} /></li> : ''
 												}
 											</ul>
 
@@ -98,7 +98,7 @@ const ProjectCard = ({title, subtitle, content, imgs, index, URL, URL_github}) =
 										<div className="w-like" style={{display: 'flex', justifyContent: 'flex-end', columnGap: '10px'}}>
 											<WebIcon link={URL} />
 											<GitHubIcon link={URL_github} />
-											<DetailsIcon link={'/details'} id={index} />
+											<DetailsIcon link={`/details/${index}`} />
 										</div>
 									</div>
 							}

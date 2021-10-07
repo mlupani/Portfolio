@@ -1,8 +1,5 @@
-import { useEffect, useState } from 'react'
-import ReactTooltip from 'react-tooltip'
-import { useRouter } from 'next/router'
-import projects from 'data/projects.json'
 import Link from 'next/link'
+import ReactTooltip from 'react-tooltip'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Navigation,Pagination, Autoplay } from 'swiper'
 import 'swiper/css/bundle'
@@ -14,19 +11,10 @@ import useDevice from 'hooks/useDevice'
 
 SwiperCore.use([Navigation,Pagination,Autoplay])
 
-const Details = () => {
+const Details = ({data: project}) => {
 
-	const router = useRouter()
-	const [project, setProject] = useState(null)
 	const { menuActive, references } = useMenuActive(false)
 	const isMobile = useDevice()
-
-	useEffect(() => {
-		let id = router.query.id
-		setProject(projects[id])
-	}, [router.query.id])
-
-	if(!project) return null
 
 	return (
 		<>
@@ -46,7 +34,7 @@ const Details = () => {
 										pagination={{'clickable': true}}
 										navigation={false} className="mySwiper">
 										{
-											project?.screens?.map(img => <SwiperSlide key={img}><img style={{objectFit: 'contain', width: '100%', height: `${isMobile ? '20rem' : '700px'}`}} src={`img/${img}`} alt="" /></SwiperSlide>)
+											project?.screens?.map(img => <SwiperSlide key={img}><img style={{objectFit: 'contain', width: '100%', height: `${isMobile ? '20rem' : '700px'}`}} src={`/img/${img}`} alt="" /></SwiperSlide>)
 										}
 									</Swiper>
 								}
@@ -105,6 +93,32 @@ const Details = () => {
 			</section>
 		</>
 	)
+}
+
+export async function getStaticPaths() {
+	try {
+		const data = await require('data/projects.json')
+		const paths = data.map((val, i) => ({params: {id: `${i}`}}))
+		return {
+			paths,
+			fallback: false
+		}
+	} catch (error) {
+		console.log(error)
+	}
+}
+
+export async function getStaticProps({params}) {
+	try {
+		const data = await require('data/projects.json').filter((project, i) => i == params.id)[0]
+		return {
+			props: {
+				data
+			}
+		}
+	} catch (error) {
+		console.log(error)
+	}
 }
 
 export default Details

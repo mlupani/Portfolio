@@ -10,7 +10,7 @@ const Header = ({menuActive, references}) => {
 	const { headerScroll, isMobile, showMobileMenu, handleScroll, handleMobileMenu } = useHeaderMenu()
 
 	return (
-		<header id="header" className={`fixed-top ${headerScroll || router?.pathname === '/details' ? 'header-scrolled':''}`}>
+		<header id="header" className={`fixed-top ${headerScroll || router?.pathname === '/details/[id]' ? 'header-scrolled':''}`}>
 			<div className="container d-flex align-items-center justify-content-between">
 
 				<h1 className="logo"><Link href="/"><a>Portfolio</a></Link></h1>
@@ -19,7 +19,7 @@ const Header = ({menuActive, references}) => {
 
 				<nav id="navbar" className={`navbar ${isMobile && showMobileMenu ? 'navbar-mobile':''}`}>
 					{
-						router?.pathname !== '/details' ?
+						router?.pathname !== '/details/[id]' ?
 							<ul>
 								<li><a onClick={(e) => handleScroll(e, references[0].current)} href="#" className={`nav-link scrollto ${menuActive === references[0].current.id ? 'active':''} `} >Inicio</a></li>
 								<li><a onClick={(e) => handleScroll(e, references[1].current)} href="#" className={`nav-link scrollto ${menuActive === references[1].current.id ? 'active':''}`} >Sobre m&iacute;</a></li>
