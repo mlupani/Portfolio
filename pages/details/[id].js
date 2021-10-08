@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Head from 'next/head'
 import ReactTooltip from 'react-tooltip'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Navigation,Pagination, Autoplay } from 'swiper'
@@ -18,6 +19,13 @@ const Details = ({data: project}) => {
 
 	return (
 		<>
+			<Head>
+				<title>&nbsp; Portfolio | Mlupani</title>
+				<meta name="description" content="Portfolio Miguel Angel Lupani" />
+				<link rel="icon" href="/favicon.ico" />
+				<meta charSet="utf-8" />
+				<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+			</Head>
 			<Header menuActive={menuActive} references={references}  />
 			<br></br><br></br>
 			<section id="portfolio-details" className="portfolio-details">
