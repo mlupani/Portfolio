@@ -5,7 +5,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.15",
     "bootstrap": "^5.1.0",
-    "next": "11.1.2",
+    "next": "^13.4.20-canary.33",
     "nodemailer": "^6.6.3",
     "react": "17.0.2",
     "react-bootstrap": "^2.0.0-beta.6",
