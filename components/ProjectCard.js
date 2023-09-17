@@ -67,14 +67,14 @@ const ProjectCard = ({title, subtitle, content, imgs, index, URL, URL_github}) =
 												}
 												{
 													content.functions.length > 3 ?
-														<li keu={'mas'}>Ver m&aacute;s <DetailsIcon width="18" height="18" link={`/details/${index}`} /></li> : ''
+														<li >Ver m&aacute;s <DetailsIcon width="18" height="18" link={`/details/${index}`} /></li> : ''
 												}
 											</ul>
 
 											<h6>Tecnologias</h6>
 											<ul style={{fontSize:'12px',display:'flex', flexDirection:'row',paddingLeft:'0px'}}>
 												{
-													content.technologies.map(({name,icon},i) => <span key={icon}><i  style={{fontSize:'30px',margin:'5px'}} data-tip={name} className={`devicon-${icon} colored`}></i></span>)
+													content.technologies.map(({name,icon}) => <span key={icon}><i  style={{fontSize:'30px',margin:'5px'}} data-tip={name} className={`devicon-${icon} colored`}></i></span>)
 												}
 											</ul>
 										</>

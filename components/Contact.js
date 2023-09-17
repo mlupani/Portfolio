@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 const Contact = ({innerRef}) => {
 
-	const { onChange, form, onSubmit, sendState } = useForm({
+	const { onChange, onSubmit, sendState } = useForm({
 		name: '',
 		email: '',
 		subject: '',

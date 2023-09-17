@@ -88,7 +88,7 @@ const Details = ({data: project}) => {
 										<h6>Tecnologias</h6>
 										<ul style={{fontSize:'12px',display:'flex', flexDirection:'row',paddingLeft:'0px'}}>
 											{
-												project.content.technologies.map(({name,icon},i) => <span key={icon}><i  style={{fontSize:'30px',margin:'5px'}} data-tip={name} className={`devicon-${icon} colored`}></i>
+												project.content.technologies.map(({name,icon}) => <span key={icon}><i  style={{fontSize:'30px',margin:'5px'}} data-tip={name} className={`devicon-${icon} colored`}></i>
 													<ReactTooltip /></span>)
 											}
 										</ul>
