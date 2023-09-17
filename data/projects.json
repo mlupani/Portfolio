@@ -62,7 +62,7 @@
     {
         "title" : "E-Commerce Client",
         "subtitle" : "Cliente de Ecommerce con manejo de productos, categorias y carrito de compras",
-        "URL": "https://ecommerce-client-nine.vercel.app",
+        "URL": "https://ecommerce-production-0d84.up.railway.app",
         "URL_github": "https://github.com/mlupani/ecommerce/tree/main/client",
         "category": "Comercial",
         "URL_backend": "https://github.com/mlupani/ecommerce/tree/main/server",
