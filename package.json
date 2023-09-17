@@ -24,7 +24,7 @@
   "name": "portfolio",
   "private": true,
   "scripts": {
-    "build": "export NODE_OPTIONS=--openssl-legacy-provider; next dev next build",
+    "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
     "start": "next start"
