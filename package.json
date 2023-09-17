@@ -24,10 +24,10 @@
   "name": "portfolio",
   "private": true,
   "scripts": {
-    "build": "set NODE_OPTIONS=--openssl-legacy-provider && next dev next build",
-    "dev": "set NODE_OPTIONS=--openssl-legacy-provider && next dev",
+    "build": "export NODE_OPTIONS=--openssl-legacy-provider; next dev next build",
+    "dev": "next dev",
     "lint": "next lint",
-    "start": "set NODE_OPTIONS=--openssl-legacy-provider && next dev next start"
+    "start": "next start"
   },
   "version": "1.0.0"
 }
