@@ -50,7 +50,7 @@ const About = ({innerRef}) => {
 										</div>
 										<p className="lead">
 										Hola, soy un desarrollador Full-Stack y vivo en Avellaneda, Buenos Aires, Argentina.<br></br>
-										Actualmente me encuentro trabajando en una empresa de comercio exterior y tengo 7 años de experiencia, trabajando en PHP y MySQL.</p>
+										Actualmente me encuentro trabajando en una empresa tengo 10 años de experiencia, trabajando en web.</p>
 										<p className="lead">
 											Me enfoco principalmente en el desarrollo de aplicaciones Web y m&oacute;viles, de preferencia utilizo Javascript.
 											Siempre estoy en busca de retos profesionales, me gusta adquirir experiencia en diversos proyectos y posibilidades de crecimiento.

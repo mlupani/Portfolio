@@ -13,6 +13,7 @@ const SkillsIcons = () => {
 			<i data-tip="PHP" className={`devicon-php-plain colored ${styles.skillsIcon}`}></i>
 			<i data-tip="NodeJS" className={`devicon-nodejs-plain colored ${styles.skillsIcon}`}></i>
 			<i data-tip="Express" className={`devicon-express-original colored ${styles.skillsIcon}`}></i>
+			<i data-tip="NestJS"className={`devicon-nestjs-plain colored ${styles.skillsIcon}`}></i>
 			<i data-tip="MYSQL" className={`devicon-mysql-plain colored ${styles.skillsIcon}`}></i>
 			<i data-tip="MongoDB" className={`devicon-mongodb-plain-wordmark colored ${styles.skillsIcon}`}></i>
 			<i data-tip="GIT" className={`devicon-git-plain colored ${styles.skillsIcon}`}></i>
