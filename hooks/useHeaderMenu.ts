@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { MouseEvent, useEffect, useState } from 'react'
 import useDevice from './useDevice'
 import useHeaderScroll from './useHeaderScroll'
 
@@ -13,7 +13,7 @@ const useHeaderMenu = () => {
 		else setShowMobileMenu(true)
 	}, [isMobile])
 
-	const handleScroll = (e, to) => {
+	const handleScroll = (e: MouseEvent, to) => {
 		if(e)	e.preventDefault()
 		setShowMobileMenu(false)
 		to?.scrollIntoView({block: 'start', behavior: 'smooth'})

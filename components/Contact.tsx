@@ -46,7 +46,7 @@ const Contact = ({innerRef}) => {
 													</div>
 													<div className="col-md-12">
 														<div className="form-group">
-															<textarea className="form-control" name="message" onChange={(e) => onChange(e.target.value, e.target.name)} rows="5" placeholder="Mensaje" required></textarea>
+															<textarea className="form-control" name="message" onChange={(e) => onChange(e.target.value, e.target.name)} rows={5} placeholder="Mensaje" required></textarea>
 														</div>
 													</div>
 													<div className="col-md-12 text-center my-3">

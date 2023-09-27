@@ -1,6 +1,7 @@
+import { Icons } from 'interfaces/interfaces'
 import Link from 'next/link'
 
-export const DetailsIcon = ({width='30', height='30', link}) => {
+export const DetailsIcon = ({width='30', height='30', link}: Icons ) => {
 	return (
 		<>
 			<span>
@@ -10,7 +11,7 @@ export const DetailsIcon = ({width='30', height='30', link}) => {
 	)
 }
 
-export const WebIcon = ({width='30', height='30', link}) => {
+export const WebIcon = ({width='30', height='30', link}: Icons) => {
 	return (
 		<>
 			<span onClick={() => window.open(link,'_blank')} style={{cursor:'pointer'}} data-tip="Web"><svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} fill="currentColor" className="bi bi-globe" viewBox="0 0 16 16">
@@ -20,7 +21,7 @@ export const WebIcon = ({width='30', height='30', link}) => {
 	)
 }
 
-export const GitHubIcon = ({width='30', height='30', link}) => {
+export const GitHubIcon = ({width='30', height='30', link}: Icons) => {
 	return (
 		<>
 			<span onClick={() => window.open(link,'_blank')} style={{cursor:'pointer'}} data-tip="Codigo Fuente">
@@ -32,7 +33,7 @@ export const GitHubIcon = ({width='30', height='30', link}) => {
 	)
 }
 
-export const MenuIcon = ({width='25', height='25', action}) => {
+export const MenuIcon = ({width='25', height='25', action}: Icons) => {
 	return (
 		<i onClick={action} className="mobile-nav-toggle">
 			<svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} fill="currentColor" className='bi bi-list' viewBox="0 0 16 16">
@@ -41,7 +42,7 @@ export const MenuIcon = ({width='25', height='25', action}) => {
 	)
 }
 
-export const CloseIcon = ({width='25', height='25', action}) => {
+export const CloseIcon = ({width='25', height='25', action}: Icons) => {
 	return (
 		<i onClick={action} className="mobile-nav-toggle">
 			<svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} fill="currentColor" className="bi bi-x-lg" viewBox="0 0 16 16">
@@ -50,7 +51,7 @@ export const CloseIcon = ({width='25', height='25', action}) => {
 	)
 }
 
-export const LinkedinIcon = ({width='25', height='25', action}) => {
+export const LinkedinIcon = ({width='25', height='25', action=null}: Icons) => {
 	return (
 		<i onClick={action}>
 			<svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} fill="currentColor" className="bi bi-linkedin" viewBox="0 0 16 16">
@@ -59,7 +60,7 @@ export const LinkedinIcon = ({width='25', height='25', action}) => {
 	)
 }
 
-export const WhatsappIcon = ({width='25', height='25', action}) => {
+export const WhatsappIcon = ({width='25', height='25', action = null}: Icons) => {
 	return (
 		<i onClick={action}>
 			<svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} fill="currentColor" className="bi bi-whatsapp" viewBox="0 0 16 16">

@@ -10,7 +10,8 @@ module.exports = {
 	],
 	'parserOptions': {
 		'ecmaFeatures': {
-			'jsx': true
+			'jsx': true,
+			'tsx': true
 		},
 		'ecmaVersion': 12,
 		'sourceType': 'module'
@@ -32,7 +33,9 @@ module.exports = {
 			'never'
 		],
 		'react/jsx-uses-react': 'off',
+		'react/tsx-uses-react': 'off',
 		'react/react-in-jsx-scope': 'off',
+		'react/react-in-tsx-scope': 'off',
 		'react/prop-types': 'off'
 	}
 }

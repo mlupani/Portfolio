@@ -1,4 +1,6 @@
-const Icon = ({className, width=16, height=16, action}) => {
+import { Icons } from "interfaces/interfaces"
+
+const Icon = ({className, width='16', height='16', action}: Icons) => {
 	return (
 		<i onClick={action} className="mobile-nav-toggle">
 			<svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} fill="currentColor" className={className} viewBox="0 0 16 16">

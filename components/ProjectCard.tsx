@@ -6,7 +6,7 @@ const ProjectCard = ({title, subtitle, content, imgs, index, URL, URL_github}) =
 
 	const [itemActive, setItemActive] = useState(0)
 	const [isMounted, setIsMounted] = useState(false)
-	const [intervalo, setIntervalo] = useState()
+	const [intervalo, setIntervalo] = useState<NodeJS.Timeout>()
 	const isMobile = useDevice()
 
 	useEffect(() => {

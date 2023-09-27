@@ -17,8 +17,7 @@ const Hero = ({innerRef}) => {
 								typeSpeed={70}
 								backSpeed={60}
 								style={{color:'white', fontSize:'32px',fontWeight:'bold'}}
-								loop >
-							</Typed>
+								loop />
 						</div>
 					</div>
 				</div>

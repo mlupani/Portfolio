@@ -5,7 +5,7 @@ export const useForm = ( initState ) => {
 	const [state, setState] = useState( initState )
 	const [sendState, setSendState] = useState(null)
 
-	const onChange = ( value, field ) => {
+	const onChange = ( value: string, field: string ) => {
 		setState({
 			...state,
 			[field]: value,
@@ -16,7 +16,7 @@ export const useForm = ( initState ) => {
 		setState(form)
 	}
 
-	const onSubmit = async (e, route) => {
+	const onSubmit = async (e: SubmitEvent, route: string) => {
 		e.preventDefault()
 
 		setSendState(1)

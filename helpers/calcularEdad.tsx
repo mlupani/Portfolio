@@ -1,4 +1,4 @@
-function calcularEdad(fecha) {
+function calcularEdad(fecha: string): number {
 	var hoy = new Date()
 	var cumpleanos = new Date(fecha)
 	var edad = hoy.getFullYear() - cumpleanos.getFullYear()

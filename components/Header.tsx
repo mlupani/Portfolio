@@ -3,8 +3,15 @@ import useHeaderMenu from 'hooks/useHeaderMenu'
 import { useRouter } from 'next/router'
 import { CloseIcon, MenuIcon } from './Icons'
 import styles from 'styles/Header.module.css'
+import { MenuNames, References } from 'interfaces/interfaces'
 
-const Header = ({menuActive, references}) => {
+interface Props {
+	menuActive: MenuNames
+	references: References
+	headScroll?: boolean
+}
+
+const Header = ({menuActive, references}: Props) => {
 
 	const router = useRouter()
 	const { headerScroll, isMobile, showMobileMenu, handleScroll, handleMobileMenu } = useHeaderMenu()

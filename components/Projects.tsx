@@ -14,12 +14,12 @@ const Projects = ({innerRef}) => {
 	const isMobile = useDevice()
 
 	return (
-		<section id="projects"  className="portfolio-mf sect-pt4 route">
+		<section id="projects"  ref={innerRef} className="portfolio-mf sect-pt4 route">
 			<div className="container">
 				<div className="row">
 					<div className="col-sm-12">
 						<div className="title-box text-center">
-							<h3 className="title-a">
+							<h3 className="title-a mt-5">
                                 Proyectos
 							</h3>
 							<p className="subtitle-a">
@@ -29,7 +29,7 @@ const Projects = ({innerRef}) => {
 						</div>
 					</div>
 				</div>
-				<div ref={innerRef} className="row">
+				<div className="row">
 					{
 						!isMobile && projects ?
 							<Swiper
